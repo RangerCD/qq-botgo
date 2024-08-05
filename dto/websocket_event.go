@@ -68,8 +68,8 @@ var intentEventMap = map[Intent][]EventType{
 		EventForumThreadCreate, EventForumThreadUpdate, EventForumThreadDelete, EventForumPostCreate,
 		EventForumPostDelete, EventForumReplyCreate, EventForumReplyDelete, EventForumAuditResult,
 	},
-	IntentInteraction: {EventInteractionCreate},
-	IntentQQ:          {EventC2CMessageCreate, EventC2CMsgReceive, EventC2CMsgReject, EventGroupATMessageCreate, EventGroupMessageCreate, EventGroupAddRobbot, EventGroupDelRobbot, EventGroupMsgReceive, EventGroupMsgReject, EventFriendAdd, EventFriendDel},
+	IntentInteraction:      {EventInteractionCreate},
+	IntentGroupAndC2CEvent: {EventC2CMessageCreate, EventFriendAdd, EventFriendDel, EventC2CMsgReject, EventC2CMsgReceive, EventGroupATMessageCreate, EventGroupMessageCreate, EventGroupAddRobbot, EventGroupDelRobbot, EventGroupMsgReject, EventGroupMsgReceive},
 }
 
 var eventIntentMap = transposeIntentEventMap(intentEventMap)
