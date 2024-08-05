@@ -13,6 +13,11 @@ type uri string
 
 // 目前提供的接口的 uri
 const (
+	privateMessageUri          uri = "/v2/users/{openid}/messages"
+	groupMessageUri            uri = "/v2/groups/{group_openid}/messages"
+	privateRichMediaMessageUri uri = "/v2/users/{openid}/files"
+	groupRichMediaMessageUri   uri = "/v2/groups/{group_openid}/files"
+
 	guildURI            uri = "/guilds/{guild_id}"
 	guildMembersURI     uri = "/guilds/{guild_id}/members"
 	guildMemberURI      uri = "/guilds/{guild_id}/members/{user_id}"
